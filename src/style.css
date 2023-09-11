@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *, *::before, *::after{
+        -webkit-tap-highlight-color: transparent;
+    }
+    [x-cloak]{
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+@layer components{
+    html, body{
+        @apply font-opensans;
+    }
+    .container-default{
+        @apply my-0 mx-auto px-3 max-w-[1000px];
+    }
+}
